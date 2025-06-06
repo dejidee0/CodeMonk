@@ -99,7 +99,7 @@ const CTASection: React.FC = () => {
                     htmlFor="interest"
                     className="block text-sm font-medium mb-1"
                   >
-                    I'm Interested In
+                    I`&apos;`m Interested In
                   </label>
                   <select
                     id="interest"

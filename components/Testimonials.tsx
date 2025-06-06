@@ -62,7 +62,7 @@ const Testimonials: React.FC = () => {
                       </div>
 
                       <blockquote className="text-xl md:text-2xl text-gray-800 leading-relaxed mb-8">
-                        "{testimonial.content}"
+                        `&quot;`{testimonial.content}`&quot;`
                       </blockquote>
 
                       <div className="flex items-center">
