@@ -1,7 +1,7 @@
 import React from "react";
 import { Course } from "../types";
 import { Link } from "./Link";
-import { Users, Clock, BarChart } from "lucide-react";
+import { Users, Clock } from "lucide-react";
 
 interface CourseCardProps {
   course: Course;
