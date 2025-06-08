@@ -13,7 +13,7 @@ import {
   ArrowRight,
 } from "lucide-react";
 
-const WHATSAPP_NUMBER = "+1234567890";
+const WHATSAPP_NUMBER = "+2348062907833";
 const WHATSAPP_MESSAGE = encodeURIComponent(
   "Hello! I'm interested in learning more about your offerings."
 );
