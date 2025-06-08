@@ -72,6 +72,7 @@ Looking forward to hearing from you!`;
       setInterest("");
       setMessage("");
     } catch (err) {
+      console.log(err);
       setError("Failed to open WhatsApp. Please try again.");
     } finally {
       setLoading(false);
