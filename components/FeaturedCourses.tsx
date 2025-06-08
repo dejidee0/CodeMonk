@@ -1,6 +1,6 @@
 "use client";
 import React, { useState } from "react";
-import { courses } from "../utils/data";
+import { courses } from "../utils/courses";
 import CourseCard from "./CourseCard";
 import { ChevronRight } from "lucide-react";
 

@@ -1,4 +1,6 @@
-import React from "react";
+"use client";
+
+import React, { useState } from "react";
 import { Button } from "./Button";
 import { CheckCircle } from "lucide-react";
 import { Link } from "./Link";
@@ -12,6 +14,69 @@ const CTASection: React.FC = () => {
     "Career support and job placement assistance",
     "Lifetime access to course materials and updates",
   ];
+
+  const [name, setName] = useState("");
+  const [email, setEmail] = useState("");
+  const [interest, setInterest] = useState("");
+  const [message, setMessage] = useState("");
+  const [error, setError] = useState<string | null>(null);
+  const [success, setSuccess] = useState<string | null>(null);
+  const [loading, setLoading] = useState(false);
+
+  const validateEmail = (email: string) => {
+    // Simple regex for email validation
+    return /^\S+@\S+\.\S+$/.test(email);
+  };
+
+  const handleSubmit = (e: React.FormEvent) => {
+    e.preventDefault();
+    setError(null);
+    setSuccess(null);
+
+    // Basic validation
+    if (!name.trim()) {
+      setError("Please enter your name.");
+      return;
+    }
+    if (!email.trim() || !validateEmail(email)) {
+      setError("Please enter a valid email address.");
+      return;
+    }
+    if (!interest) {
+      setError("Please select your area of interest.");
+      return;
+    }
+
+    setLoading(true);
+
+    try {
+      const phoneNumber = "+2348062907833"; // Replace with your WhatsApp number (international format, no +)
+      const text = `Hello! I would like to get more info about your courses.
+
+Name: ${name}
+Email: ${email}
+Interested In: ${interest}
+Message: ${message || "N/A"}
+
+Looking forward to hearing from you!`;
+
+      const encodedText = encodeURIComponent(text);
+      const whatsappUrl = `https://wa.me/${phoneNumber}?text=${encodedText}`;
+
+      window.open(whatsappUrl, "_blank");
+
+      setSuccess("WhatsApp window opened. Please send your message there.");
+      // Optionally clear the form
+      setName("");
+      setEmail("");
+      setInterest("");
+      setMessage("");
+    } catch (err) {
+      setError("Failed to open WhatsApp. Please try again.");
+    } finally {
+      setLoading(false);
+    }
+  };
 
   return (
     <section className="py-20 bg-gradient-to-br from-blue-900 to-blue-950 text-white relative overflow-hidden">
@@ -63,7 +128,18 @@ const CTASection: React.FC = () => {
                 Get Started Today
               </h3>
 
-              <form className="space-y-4">
+              <form className="space-y-4" onSubmit={handleSubmit} noValidate>
+                {error && (
+                  <p className="text-red-400 text-center font-medium">
+                    {error}
+                  </p>
+                )}
+                {success && (
+                  <p className="text-green-400 text-center font-medium">
+                    {success}
+                  </p>
+                )}
+
                 <div>
                   <label
                     htmlFor="name"
@@ -74,8 +150,12 @@ const CTASection: React.FC = () => {
                   <input
                     type="text"
                     id="name"
+                    value={name}
+                    onChange={(e) => setName(e.target.value)}
+                    required
                     placeholder="Enter your full name"
                     className="w-full px-4 py-3 rounded-lg bg-white/5 border border-white/10 text-white placeholder-blue-200 focus:outline-none focus:ring-2 focus:ring-teal-400"
+                    disabled={loading}
                   />
                 </div>
 
@@ -89,8 +169,12 @@ const CTASection: React.FC = () => {
                   <input
                     type="email"
                     id="email"
+                    value={email}
+                    onChange={(e) => setEmail(e.target.value)}
+                    required
                     placeholder="Your email address"
                     className="w-full px-4 py-3 rounded-lg bg-white/5 border border-white/10 text-white placeholder-blue-200 focus:outline-none focus:ring-2 focus:ring-teal-400"
+                    disabled={loading}
                   />
                 </div>
 
@@ -99,28 +183,32 @@ const CTASection: React.FC = () => {
                     htmlFor="interest"
                     className="block text-sm font-medium mb-1"
                   >
-                    I`&apos;`m Interested In
+                    I&apos;m Interested In
                   </label>
                   <select
                     id="interest"
+                    value={interest}
+                    onChange={(e) => setInterest(e.target.value)}
+                    required
                     className="w-full px-4 py-3 rounded-lg bg-white/5 border border-white/10 text-white focus:outline-none focus:ring-2 focus:ring-teal-400"
+                    disabled={loading}
                   >
                     <option value="" className="bg-blue-900">
                       Select your interest
                     </option>
-                    <option value="web-development" className="bg-blue-900">
+                    <option value="Web Development" className="bg-blue-900">
                       Web Development
                     </option>
-                    <option value="data-science" className="bg-blue-900">
+                    <option value="Data Science" className="bg-blue-900">
                       Data Science
                     </option>
-                    <option value="mobile-development" className="bg-blue-900">
+                    <option value="Mobile Development" className="bg-blue-900">
                       Mobile Development
                     </option>
-                    <option value="design" className="bg-blue-900">
+                    <option value="UI/UX Design" className="bg-blue-900">
                       UI/UX Design
                     </option>
-                    <option value="devops" className="bg-blue-900">
+                    <option value="DevOps" className="bg-blue-900">
                       DevOps
                     </option>
                   </select>
@@ -136,8 +224,11 @@ const CTASection: React.FC = () => {
                   <textarea
                     id="message"
                     rows={4}
+                    value={message}
+                    onChange={(e) => setMessage(e.target.value)}
                     placeholder="Tell us about your goals and what you're looking to achieve"
                     className="w-full px-4 py-3 rounded-lg bg-white/5 border border-white/10 text-white placeholder-blue-200 focus:outline-none focus:ring-2 focus:ring-teal-400"
+                    disabled={loading}
                   ></textarea>
                 </div>
 
@@ -146,8 +237,9 @@ const CTASection: React.FC = () => {
                   size="lg"
                   className="w-full"
                   type="submit"
+                  disabled={loading}
                 >
-                  Request Information
+                  {loading ? "Processing..." : "Request Information"}
                 </Button>
               </form>
 

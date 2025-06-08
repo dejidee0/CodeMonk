@@ -2,16 +2,27 @@ export interface Course {
   id: string;
   title: string;
   description: string;
-  price: number;
-  discountPrice?: number;
-  duration: string;
-  level: "Beginner" | "Intermediate" | "Advanced";
   category: string;
-  image: string;
+  level: "Beginner" | "Intermediate" | "Advanced";
+  duration: string;
+  price: number;
+  originalPrice?: number;
   instructor: string;
-  enrolledStudents: number;
+  instructorBio: string;
   rating: number;
-  slug: string;
+  studentsEnrolled: number;
+  image: string;
+  skills: string[];
+  prerequisites: string[];
+  curriculum: {
+    module: string;
+    lessons: string[];
+  }[];
+  whatYouWillLearn: string[];
+  features: string[];
+  certificate: boolean;
+  support: string;
+  access: string;
 }
 
 export interface Testimonial {

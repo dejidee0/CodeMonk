@@ -20,7 +20,24 @@
 }
 
 body {
-  background: var(--background);
+  background: linear-gradient(to bottom right, #3b6ca8, #1c3f70);
+
   color: var(--foreground);
   font-family: Arial, Helvetica, sans-serif;
+}
+
+@keyframes loaderBarAnim {
+  0% {
+    transform: translateX(-100%);
+  }
+  50% {
+    transform: translateX(50%);
+  }
+  100% {
+    transform: translateX(100%);
+  }
+}
+
+.animate-loaderBar {
+  animation: loaderBarAnim 1.5s ease-in-out infinite;
 }

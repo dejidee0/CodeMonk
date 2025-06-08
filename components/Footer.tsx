@@ -1,213 +1,172 @@
 "use client";
+
 import React from "react";
-import { Link } from "./Link";
+import Link from "next/link";
 import {
+  BookOpen,
+  Mail,
+  Phone,
+  Facebook,
   Twitter,
   Linkedin,
-  Facebook,
   Instagram,
-  Mail,
-  MapPin,
-  Phone,
 } from "lucide-react";
 
-const Footer: React.FC = () => {
+export const Footer: React.FC = () => {
+  const currentYear = new Date().getFullYear();
+
+  const footerLinks = {
+    services: [
+      { name: "Web Development Courses", href: "#" },
+      { name: "Data Science Training", href: "#" },
+      { name: "UI/UX Design", href: "#" },
+      { name: "Business Websites", href: "#" },
+      { name: "E-commerce Solutions", href: "#" },
+    ],
+    company: [
+      { name: "About Us", href: "/about" },
+      { name: "Contact", href: "/contact" },
+      { name: "Careers", href: "#" },
+      { name: "Blog", href: "#" },
+      { name: "Privacy Policy", href: "#" },
+    ],
+    support: [
+      { name: "Help Center", href: "#" },
+      { name: "Student Portal", href: "#" },
+      { name: "Course Materials", href: "#" },
+      { name: "Technical Support", href: "#" },
+      { name: "Community Forum", href: "#" },
+    ],
+  };
+
+  const socialLinks = [
+    { icon: Facebook, href: "#", label: "Facebook" },
+    { icon: Twitter, href: "#", label: "Twitter" },
+    { icon: Linkedin, href: "#", label: "LinkedIn" },
+    { icon: Instagram, href: "#", label: "Instagram" },
+  ];
+
   return (
-    <footer className="bg-gray-900 text-gray-300 pt-16 pb-8">
-      <div className="container mx-auto px-4 md:px-6">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-12">
-          <div>
-            <h3 className="text-xl font-bold text-white mb-4">CodeWithMonk</h3>
-            <p className="mb-4 text-gray-400 leading-relaxed">
-              Empowering the next generation of developers with high-quality
-              courses and mentorship from industry experts.
+    <footer className="bg-gray-900 text-white">
+      <div className="container mx-auto px-4 md:px-6 py-16">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+          {/* Company Info */}
+          <div className="lg:col-span-1">
+            <div className="flex items-center space-x-2 mb-6">
+              <div className="w-10 h-10 bg-gradient-to-br from-blue-600 to-teal-600 rounded-lg flex items-center justify-center">
+                <BookOpen className="h-6 w-6 text-white" />
+              </div>
+              <div>
+                <h3 className="text-xl font-bold bg-gradient-to-r from-blue-400 to-teal-400 bg-clip-text text-transparent">
+                  Codemonk
+                </h3>
+                <p className="text-xs text-gray-400">Learn • Build • Grow</p>
+              </div>
+            </div>
+            <p className="text-gray-300 mb-6 leading-relaxed">
+              Empowering individuals and businesses through world-class
+              education and cutting-edge web solutions.
             </p>
-            <div className="flex space-x-4">
-              <Link
-                to="https://twitter.com"
-                external
-                className="text-gray-400 hover:text-white transition-colors"
-              >
-                <Twitter className="h-5 w-5" />
-              </Link>
-              <Link
-                to="https://linkedin.com"
-                external
-                className="text-gray-400 hover:text-white transition-colors"
-              >
-                <Linkedin className="h-5 w-5" />
-              </Link>
-              <Link
-                to="https://facebook.com"
-                external
-                className="text-gray-400 hover:text-white transition-colors"
-              >
-                <Facebook className="h-5 w-5" />
-              </Link>
-              <Link
-                to="https://instagram.com"
-                external
-                className="text-gray-400 hover:text-white transition-colors"
-              >
-                <Instagram className="h-5 w-5" />
-              </Link>
+            <div className="space-y-3">
+              <div className="flex items-center text-gray-300">
+                <Mail className="h-4 w-4 mr-3 text-blue-400" />
+                <span className="text-sm">hello@Codemonk.com</span>
+              </div>
+              <div className="flex items-center text-gray-300">
+                <Phone className="h-4 w-4 mr-3 text-blue-400" />
+                <span className="text-sm">+2348062907833</span>
+              </div>
             </div>
           </div>
 
+          {/* Services */}
           <div>
-            <h3 className="text-lg font-semibold text-white mb-4">Courses</h3>
-            <ul className="space-y-2">
-              <li>
-                <Link
-                  to="/courses/web-development"
-                  className="text-gray-400 hover:text-white transition-colors"
-                >
-                  Web Development
-                </Link>
-              </li>
-              <li>
-                <Link
-                  to="/courses/data-science"
-                  className="text-gray-400 hover:text-white transition-colors"
-                >
-                  Data Science
-                </Link>
-              </li>
-              <li>
-                <Link
-                  to="/courses/mobile-development"
-                  className="text-gray-400 hover:text-white transition-colors"
-                >
-                  Mobile Development
-                </Link>
-              </li>
-              <li>
-                <Link
-                  to="/courses/design"
-                  className="text-gray-400 hover:text-white transition-colors"
-                >
-                  UI/UX Design
-                </Link>
-              </li>
-              <li>
-                <Link
-                  to="/courses/devops"
-                  className="text-gray-400 hover:text-white transition-colors"
-                >
-                  DevOps
-                </Link>
-              </li>
-            </ul>
-          </div>
-
-          <div>
-            <h3 className="text-lg font-semibold text-white mb-4">Company</h3>
-            <ul className="space-y-2">
-              <li>
-                <Link
-                  to="/about"
-                  className="text-gray-400 hover:text-white transition-colors"
-                >
-                  About Us
-                </Link>
-              </li>
-              <li>
-                <Link
-                  to="/instructors"
-                  className="text-gray-400 hover:text-white transition-colors"
-                >
-                  Our Instructors
-                </Link>
-              </li>
-              <li>
-                <Link
-                  to="/testimonials"
-                  className="text-gray-400 hover:text-white transition-colors"
-                >
-                  Success Stories
-                </Link>
-              </li>
-              <li>
-                <Link
-                  to="/blog"
-                  className="text-gray-400 hover:text-white transition-colors"
-                >
-                  Blog
-                </Link>
-              </li>
-              <li>
-                <Link
-                  to="/careers"
-                  className="text-gray-400 hover:text-white transition-colors"
-                >
-                  Careers
-                </Link>
-              </li>
-            </ul>
-          </div>
-
-          <div>
-            <h3 className="text-lg font-semibold text-white mb-4">Contact</h3>
+            <h4 className="text-lg font-semibold mb-6 text-white">Services</h4>
             <ul className="space-y-3">
-              <li className="flex items-start">
-                <MapPin className="h-5 w-5 text-gray-400 mr-2 mt-0.5" />
-                <span className="text-gray-400">
-                  123 Innovation Street, Tech City, TC 98765
-                </span>
-              </li>
-              <li className="flex items-center">
-                <Phone className="h-5 w-5 text-gray-400 mr-2" />
-                <Link
-                  to="tel:+11234567890"
-                  className="text-gray-400 hover:text-white transition-colors"
-                >
-                  +1 (123) 456-7890
-                </Link>
-              </li>
-              <li className="flex items-center">
-                <Mail className="h-5 w-5 text-gray-400 mr-2" />
-                <Link
-                  to="mailto:hello@codewithmonk.com"
-                  className="text-gray-400 hover:text-white transition-colors"
-                >
-                  hello@codewithmonk.com
-                </Link>
-              </li>
+              {footerLinks.services.map((link, index) => (
+                <li key={index}>
+                  <a
+                    href={link.href}
+                    className="text-gray-300 hover:text-blue-400 transition-colors duration-200 text-sm"
+                  >
+                    {link.name}
+                  </a>
+                </li>
+              ))}
+            </ul>
+          </div>
+
+          {/* Company */}
+          <div>
+            <h4 className="text-lg font-semibold mb-6 text-white">Company</h4>
+            <ul className="space-y-3">
+              {footerLinks.company.map((link, index) => (
+                <li key={index}>
+                  {link.href.startsWith("/") ? (
+                    <Link
+                      href={link.href}
+                      className="text-gray-300 hover:text-blue-400 transition-colors duration-200 text-sm"
+                    >
+                      {link.name}
+                    </Link>
+                  ) : (
+                    <a
+                      href={link.href}
+                      className="text-gray-300 hover:text-blue-400 transition-colors duration-200 text-sm"
+                    >
+                      {link.name}
+                    </a>
+                  )}
+                </li>
+              ))}
+            </ul>
+          </div>
+
+          {/* Support */}
+          <div>
+            <h4 className="text-lg font-semibold mb-6 text-white">Support</h4>
+            <ul className="space-y-3">
+              {footerLinks.support.map((link, index) => (
+                <li key={index}>
+                  <a
+                    href={link.href}
+                    className="text-gray-300 hover:text-blue-400 transition-colors duration-200 text-sm"
+                  >
+                    {link.name}
+                  </a>
+                </li>
+              ))}
             </ul>
           </div>
         </div>
 
-        <div className="border-t border-gray-800 pt-8">
-          <div className="flex flex-col md:flex-row md:justify-between md:items-center">
-            <p className="text-gray-500 text-sm mb-4 md:mb-0">
-              &copy; {new Date().getFullYear()} CodeWithMonk. All rights
-              reserved.
-            </p>
-            <div className="flex flex-wrap gap-x-4 gap-y-2">
-              <Link
-                to="/terms"
-                className="text-gray-500 hover:text-white text-sm transition-colors"
-              >
-                Terms of Service
-              </Link>
-              <Link
-                to="/privacy"
-                className="text-gray-500 hover:text-white text-sm transition-colors"
-              >
-                Privacy Policy
-              </Link>
-              <Link
-                to="/cookie-policy"
-                className="text-gray-500 hover:text-white text-sm transition-colors"
-              >
-                Cookie Policy
-              </Link>
-              <Link
-                to="/sitemap"
-                className="text-gray-500 hover:text-white text-sm transition-colors"
-              >
-                Sitemap
-              </Link>
+        {/* Social Links & Copyright */}
+        <div className="border-t border-gray-800 mt-12 pt-8">
+          <div className="flex flex-col md:flex-row justify-between items-center">
+            <div className="flex space-x-6 mb-4 md:mb-0">
+              {socialLinks.map((social, index) => {
+                const Icon = social.icon;
+                return (
+                  <a
+                    key={index}
+                    href={social.href}
+                    aria-label={social.label}
+                    className="w-10 h-10 bg-gray-800 rounded-lg flex items-center justify-center hover:bg-gradient-to-br hover:from-blue-600 hover:to-teal-600 transition-all duration-300 transform hover:scale-110"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    <Icon className="h-5 w-5" />
+                  </a>
+                );
+              })}
+            </div>
+            <div className="text-center md:text-right">
+              <p className="text-gray-400 text-sm">
+                © {currentYear} Codemonk. All rights reserved.
+              </p>
+              <p className="text-gray-500 text-xs mt-1">
+                Built with passion for education and innovation.
+              </p>
             </div>
           </div>
         </div>
@@ -215,5 +174,3 @@ const Footer: React.FC = () => {
     </footer>
   );
 };
-
-export default Footer;
