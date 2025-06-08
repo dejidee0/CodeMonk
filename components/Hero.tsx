@@ -12,11 +12,7 @@ import {
 } from "lucide-react";
 import Link from "next/link";
 
-interface HeroProps {
-  onNavigate: (page: string) => void;
-}
-
-const Hero: React.FC<HeroProps> = () => {
+const Hero: React.FC = () => {
   return (
     <section className="relative bg-gradient-to-br from-blue-900 via-blue-950 to-indigo-900 text-white pt-32 pb-20 md:pt-40 md:pb-28 overflow-hidden">
       {/* Animated Background Effects */}
