@@ -1,4 +1,3 @@
-import BlogSection from "@/components/BlogSection";
 import CTASection from "@/components/CTASection";
 import FeaturedCourses from "@/components/FeaturedCourses";
 import Hero from "@/components/Hero";
@@ -15,7 +14,7 @@ const Home: React.FC = () => {
       <FeaturedCourses />
       <Testimonials />
       <InstructorsSection />
-      <BlogSection />
+
       <CTASection />
     </div>
   );

@@ -5,13 +5,13 @@ import { Link } from "./Link";
 
 const InstructorsSection: React.FC = () => {
   return (
-    <section className="py-20 bg-gray-50">
+    <section className="py-20 bg-gray-50 dark:bg-gray-900">
       <div className="container mx-auto px-4 md:px-6">
         <div className="text-center mb-12">
-          <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+          <h2 className="text-3xl md:text-4xl font-bold text-gray-900 dark:text-gray-100 mb-4">
             Learn from Industry Experts
           </h2>
-          <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+          <p className="text-xl text-gray-600 dark:text-gray-300 max-w-3xl mx-auto">
             Our instructors are passionate professionals with years of
             experience in their fields
           </p>
@@ -21,9 +21,9 @@ const InstructorsSection: React.FC = () => {
           {instructors.map((instructor) => (
             <div
               key={instructor.id}
-              className="bg-white rounded-xl overflow-hidden shadow-sm hover:shadow-md transition-shadow"
+              className="bg-white dark:bg-gray-800 rounded-xl overflow-hidden shadow-sm hover:shadow-md transition-shadow"
             >
-              <div className="aspect-[4/3] overflow-hidden bg-blue-100">
+              <div className="aspect-[4/3] overflow-hidden bg-blue-100 dark:bg-blue-900">
                 <img
                   src={instructor.image}
                   alt={instructor.name}
@@ -32,24 +32,26 @@ const InstructorsSection: React.FC = () => {
               </div>
 
               <div className="p-6">
-                <h3 className="text-xl font-semibold text-gray-900 mb-1">
+                <h3 className="text-xl font-semibold text-gray-900 dark:text-gray-100 mb-1">
                   {instructor.name}
                 </h3>
-                <p className="text-blue-600 mb-4">{instructor.role}</p>
+                <p className="text-blue-600 dark:text-blue-400 mb-4">
+                  {instructor.role}
+                </p>
 
-                <p className="text-gray-600 mb-4 line-clamp-3">
+                <p className="text-gray-600 dark:text-gray-300 mb-4 line-clamp-3">
                   {instructor.bio}
                 </p>
 
                 <div className="mb-6">
-                  <h4 className="text-sm font-medium text-gray-700 mb-2">
+                  <h4 className="text-sm font-medium text-gray-700 dark:text-gray-400 mb-2">
                     Expertise:
                   </h4>
                   <div className="flex flex-wrap gap-2">
                     {instructor.expertise.map((skill, index) => (
                       <span
                         key={index}
-                        className="inline-block px-3 py-1 rounded-full text-xs font-medium bg-blue-50 text-blue-600"
+                        className="inline-block px-3 py-1 rounded-full text-xs font-medium bg-blue-50 dark:bg-blue-800 text-blue-600 dark:text-blue-400"
                       >
                         {skill}
                       </span>
@@ -62,7 +64,7 @@ const InstructorsSection: React.FC = () => {
                     <Link
                       to={instructor.socialLinks.twitter}
                       external
-                      className="w-9 h-9 rounded-full bg-gray-100 flex items-center justify-center text-gray-600 hover:bg-blue-50 hover:text-blue-600 transition-colors"
+                      className="w-9 h-9 rounded-full bg-gray-100 dark:bg-gray-700 flex items-center justify-center text-gray-600 dark:text-gray-300 hover:bg-blue-50 dark:hover:bg-blue-800 hover:text-blue-600 dark:hover:text-blue-400 transition-colors"
                     >
                       <Twitter className="h-4 w-4" />
                     </Link>
@@ -72,7 +74,7 @@ const InstructorsSection: React.FC = () => {
                     <Link
                       to={instructor.socialLinks.linkedin}
                       external
-                      className="w-9 h-9 rounded-full bg-gray-100 flex items-center justify-center text-gray-600 hover:bg-blue-50 hover:text-blue-600 transition-colors"
+                      className="w-9 h-9 rounded-full bg-gray-100 dark:bg-gray-700 flex items-center justify-center text-gray-600 dark:text-gray-300 hover:bg-blue-50 dark:hover:bg-blue-800 hover:text-blue-600 dark:hover:text-blue-400 transition-colors"
                     >
                       <Linkedin className="h-4 w-4" />
                     </Link>
@@ -82,7 +84,7 @@ const InstructorsSection: React.FC = () => {
                     <Link
                       to={instructor.socialLinks.github}
                       external
-                      className="w-9 h-9 rounded-full bg-gray-100 flex items-center justify-center text-gray-600 hover:bg-blue-50 hover:text-blue-600 transition-colors"
+                      className="w-9 h-9 rounded-full bg-gray-100 dark:bg-gray-700 flex items-center justify-center text-gray-600 dark:text-gray-300 hover:bg-blue-50 dark:hover:bg-blue-800 hover:text-blue-600 dark:hover:text-blue-400 transition-colors"
                     >
                       <Github className="h-4 w-4" />
                     </Link>

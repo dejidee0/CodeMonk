@@ -1,10 +1,11 @@
 import type { Metadata } from "next";
 import "./globals.css";
 import { ClientShell } from "@/components/ClientShell";
+
 // new wrapper
 
 export const metadata: Metadata = {
-  title: "Codemonk",
+  title: "Codewithmonk",
   description: "Learn. Build. Grow.",
 };
 
@@ -14,7 +15,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="en">
+    <html lang="en" suppressHydrationWarning>
       <body>
         <ClientShell>{children}</ClientShell>
       </body>

@@ -9,8 +9,8 @@ export const courses: Course[] = [
     category: "Frontend Development",
     level: "Intermediate",
     duration: "8 weeks",
-    price: 299,
-    originalPrice: 399,
+    price: 300,
+    originalPrice: 400,
     instructor: "Sarah Chen",
     instructorBio:
       "Senior Frontend Engineer at Google with 8+ years of React experience. Expert in scalable application architecture and user-centric UI development. Passionate about mentoring and open source contributions.",
@@ -124,8 +124,8 @@ export const courses: Course[] = [
     category: "Data Science",
     level: "Beginner",
     duration: "10 weeks",
-    price: 249,
-    originalPrice: 349,
+    price: 200,
+    originalPrice: 300,
     instructor: "Dr. Michael Rodriguez",
     instructorBio:
       "Data Science Lead at Netflix with a PhD in Statistics. Has published over 50 research papers on machine learning and data analysis techniques. Experienced mentor and industry consultant.",
@@ -236,8 +236,8 @@ export const courses: Course[] = [
     category: "Full-Stack Development",
     level: "Advanced",
     duration: "12 weeks",
-    price: 399,
-    originalPrice: 549,
+    price: 300,
+    originalPrice: 400,
     instructor: "Alex Thompson",
     instructorBio:
       "Full-Stack Architect at Spotify with over a decade of experience. Expert in scalable system design, cloud infrastructure, and open-source contributions. Passionate about teaching and mentoring developers.",
@@ -361,8 +361,8 @@ export const courses: Course[] = [
     category: "Cybersecurity",
     level: "Beginner",
     duration: "8 weeks",
-    price: 279,
-    originalPrice: 379,
+    price: 250,
+    originalPrice: 350,
     instructor: "Amira Johnson",
     instructorBio:
       "Cybersecurity Consultant with 10+ years of experience at Deloitte and IBM. Certified Ethical Hacker (CEH) and CISSP holder with a passion for securing digital infrastructures and mentoring new professionals.",
@@ -450,8 +450,8 @@ export const courses: Course[] = [
     category: "Product Management",
     level: "Beginner",
     duration: "6 weeks",
-    price: 229,
-    originalPrice: 329,
+    price: 200,
+    originalPrice: 300,
     instructor: "Emily Davis",
     instructorBio:
       "Senior Product Manager at Airbnb with a decade of experience building customer-first digital experiences. Former UX researcher turned product strategist focused on outcome-driven development.",
@@ -526,90 +526,5 @@ export const courses: Course[] = [
     certificate: true,
     support: "Slack and email support with weekly Q&A",
     access: "Lifetime access with downloadable templates",
-  },
-  {
-    id: "data-analytics-bootcamp",
-    title: "Data Analytics Bootcamp",
-    description:
-      "Master the tools and techniques of data analysis in just 9 weeks. Learn Excel, SQL, Tableau, and data storytelling while working on real datasets. Perfect for beginners aiming to enter analytics, business intelligence, or data-driven decision-making roles.",
-    category: "Data Analytics",
-    level: "Beginner",
-    duration: "9 weeks",
-    price: 299,
-    originalPrice: 399,
-    instructor: "Nikhil Sharma",
-    instructorBio:
-      "Business Intelligence Analyst at Meta with 8+ years of experience in data analytics and visualization. Expert in SQL, Excel, and Tableau with a passion for teaching data-driven storytelling.",
-    rating: 4.8,
-    studentsEnrolled: 5912,
-    image:
-      "https://images.pexels.com/photos/669619/pexels-photo-669619.jpeg?auto=compress&cs=tinysrgb&w=800",
-    skills: [
-      "Microsoft Excel (formulas, pivot tables, dashboards)",
-      "SQL for data querying",
-      "Tableau for visualization",
-      "Data cleaning and preparation",
-      "Data storytelling and dashboards",
-      "Business metrics and KPIs",
-      "A/B testing fundamentals",
-      "Presentation and communication of insights",
-    ],
-    prerequisites: [
-      "Basic computer skills",
-      "Comfort with numbers and charts",
-      "No programming experience required",
-    ],
-    curriculum: [
-      {
-        module: "Excel for Analytics",
-        lessons: [
-          "Formulas and Functions",
-          "Charts, Pivot Tables, and Conditional Formatting",
-          "Data Cleaning in Excel",
-        ],
-      },
-      {
-        module: "SQL for Data Extraction",
-        lessons: [
-          "SQL Syntax and Queries",
-          "Filtering, Sorting, and Aggregations",
-          "Joins, Subqueries, and Views",
-        ],
-      },
-      {
-        module: "Visualization and Storytelling",
-        lessons: [
-          "Getting Started with Tableau",
-          "Designing Dashboards and Reports",
-          "Telling Data Stories with Visuals",
-        ],
-      },
-      {
-        module: "Capstone and Business Insights",
-        lessons: [
-          "Case Study: E-commerce Data Analysis",
-          "A/B Testing Concepts",
-          "Final Project: Present Data Insights to Stakeholders",
-        ],
-      },
-    ],
-    whatYouWillLearn: [
-      "Clean, analyze, and visualize data",
-      "Write SQL queries for data extraction",
-      "Use Excel and Tableau to create dashboards",
-      "Interpret key business metrics",
-      "Communicate insights effectively",
-      "Build a data analytics portfolio project",
-    ],
-    features: [
-      "45+ hours of training with hands-on practice",
-      "Access to datasets and case studies",
-      "Instructor feedback on capstone projects",
-      "Live weekly workshops and office hours",
-      "Portfolio-ready final presentation",
-    ],
-    certificate: true,
-    support: "Email and community support with weekly check-ins",
-    access: "Lifetime access to all materials and updates",
   },
 ];

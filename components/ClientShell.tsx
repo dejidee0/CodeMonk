@@ -1,9 +1,10 @@
 "use client";
 import React, { useEffect, useState } from "react";
 import { usePathname } from "next/navigation";
-import { Navbar } from "./Navbar";
 import { Footer } from "./Footer";
 import GlobalLoader from "./GlobalLoader";
+import { ThemeProvider } from "@/app/context/ThemeProvider";
+import { Navbar } from "./Navbar";
 
 export const ClientShell: React.FC<{ children: React.ReactNode }> = ({
   children,
@@ -21,10 +22,12 @@ export const ClientShell: React.FC<{ children: React.ReactNode }> = ({
 
   return (
     <>
-      {loading && <GlobalLoader />}
-      <Navbar />
-      <main className="flex-grow">{children}</main>
-      <Footer />
+      <ThemeProvider>
+        {loading && <GlobalLoader />}
+        <Navbar />
+        <main className="flex-grow">{children}</main>
+        <Footer />
+      </ThemeProvider>
     </>
   );
 };

@@ -47,33 +47,35 @@ export const Footer: React.FC = () => {
   ];
 
   return (
-    <footer className="bg-gray-900 text-white">
+    <footer className="bg-gray-900 dark:bg-gray-50 text-white dark:text-gray-900">
       <div className="container mx-auto px-4 md:px-6 py-16">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
           {/* Company Info */}
           <div className="lg:col-span-1">
             <div className="flex items-center space-x-2 mb-6">
               <div className="w-10 h-10 bg-gradient-to-br from-blue-600 to-teal-600 rounded-lg flex items-center justify-center">
-                <BookOpen className="h-6 w-6 text-white" />
+                <BookOpen className="h-6 w-6 text-white dark:text-gray-900" />
               </div>
               <div>
                 <h3 className="text-xl font-bold bg-gradient-to-r from-blue-400 to-teal-400 bg-clip-text text-transparent">
-                  Codemonk
+                  Codewithmonk
                 </h3>
-                <p className="text-xs text-gray-400">Learn • Build • Grow</p>
+                <p className="text-xs text-gray-400 dark:text-gray-600">
+                  Learn • Build • Grow
+                </p>
               </div>
             </div>
-            <p className="text-gray-300 mb-6 leading-relaxed">
+            <p className="text-gray-300 dark:text-gray-700 mb-6 leading-relaxed">
               Empowering individuals and businesses through world-class
               education and cutting-edge web solutions.
             </p>
             <div className="space-y-3">
-              <div className="flex items-center text-gray-300">
-                <Mail className="h-4 w-4 mr-3 text-blue-400" />
-                <span className="text-sm">hello@Codemonk.com</span>
+              <div className="flex items-center text-gray-300 dark:text-gray-700">
+                <Mail className="h-4 w-4 mr-3 text-blue-400 dark:text-blue-600" />
+                <span className="text-sm">hello@Codewithmonk.com</span>
               </div>
-              <div className="flex items-center text-gray-300">
-                <Phone className="h-4 w-4 mr-3 text-blue-400" />
+              <div className="flex items-center text-gray-300 dark:text-gray-700">
+                <Phone className="h-4 w-4 mr-3 text-blue-400 dark:text-blue-600" />
                 <span className="text-sm">+2348062907833</span>
               </div>
             </div>
@@ -81,13 +83,15 @@ export const Footer: React.FC = () => {
 
           {/* Services */}
           <div>
-            <h4 className="text-lg font-semibold mb-6 text-white">Services</h4>
+            <h4 className="text-lg font-semibold mb-6 text-white dark:text-gray-900">
+              Services
+            </h4>
             <ul className="space-y-3">
               {footerLinks.services.map((link, index) => (
                 <li key={index}>
                   <a
                     href={link.href}
-                    className="text-gray-300 hover:text-blue-400 transition-colors duration-200 text-sm"
+                    className="text-gray-300 dark:text-gray-700 hover:text-blue-400 dark:hover:text-blue-600 transition-colors duration-200 text-sm"
                   >
                     {link.name}
                   </a>
@@ -98,21 +102,23 @@ export const Footer: React.FC = () => {
 
           {/* Company */}
           <div>
-            <h4 className="text-lg font-semibold mb-6 text-white">Company</h4>
+            <h4 className="text-lg font-semibold mb-6 text-white dark:text-gray-900">
+              Company
+            </h4>
             <ul className="space-y-3">
               {footerLinks.company.map((link, index) => (
                 <li key={index}>
                   {link.href.startsWith("/") ? (
                     <Link
                       href={link.href}
-                      className="text-gray-300 hover:text-blue-400 transition-colors duration-200 text-sm"
+                      className="text-gray-300 dark:text-gray-700 hover:text-blue-400 dark:hover:text-blue-600 transition-colors duration-200 text-sm"
                     >
                       {link.name}
                     </Link>
                   ) : (
                     <a
                       href={link.href}
-                      className="text-gray-300 hover:text-blue-400 transition-colors duration-200 text-sm"
+                      className="text-gray-300 dark:text-gray-700 hover:text-blue-400 dark:hover:text-blue-600 transition-colors duration-200 text-sm"
                     >
                       {link.name}
                     </a>
@@ -124,13 +130,15 @@ export const Footer: React.FC = () => {
 
           {/* Support */}
           <div>
-            <h4 className="text-lg font-semibold mb-6 text-white">Support</h4>
+            <h4 className="text-lg font-semibold mb-6 text-white dark:text-gray-900">
+              Support
+            </h4>
             <ul className="space-y-3">
               {footerLinks.support.map((link, index) => (
                 <li key={index}>
                   <a
                     href={link.href}
-                    className="text-gray-300 hover:text-blue-400 transition-colors duration-200 text-sm"
+                    className="text-gray-300 dark:text-gray-700 hover:text-blue-400 dark:hover:text-blue-600 transition-colors duration-200 text-sm"
                   >
                     {link.name}
                   </a>
@@ -141,7 +149,7 @@ export const Footer: React.FC = () => {
         </div>
 
         {/* Social Links & Copyright */}
-        <div className="border-t border-gray-800 mt-12 pt-8">
+        <div className="border-t border-gray-800 dark:border-gray-200 mt-12 pt-8">
           <div className="flex flex-col md:flex-row justify-between items-center">
             <div className="flex space-x-6 mb-4 md:mb-0">
               {socialLinks.map((social, index) => {
@@ -151,20 +159,20 @@ export const Footer: React.FC = () => {
                     key={index}
                     href={social.href}
                     aria-label={social.label}
-                    className="w-10 h-10 bg-gray-800 rounded-lg flex items-center justify-center hover:bg-gradient-to-br hover:from-blue-600 hover:to-teal-600 transition-all duration-300 transform hover:scale-110"
+                    className="w-10 h-10 bg-gray-800 dark:bg-gray-200 rounded-lg flex items-center justify-center hover:bg-gradient-to-br hover:from-blue-600 hover:to-teal-600 transition-all duration-300 transform hover:scale-110"
                     target="_blank"
                     rel="noopener noreferrer"
                   >
-                    <Icon className="h-5 w-5" />
+                    <Icon className="h-5 w-5 text-white dark:text-gray-900" />
                   </a>
                 );
               })}
             </div>
             <div className="text-center md:text-right">
-              <p className="text-gray-400 text-sm">
-                © {currentYear} Codemonk. All rights reserved.
+              <p className="text-gray-400 dark:text-gray-600 text-sm">
+                © {currentYear} Codewithmonk. All rights reserved.
               </p>
-              <p className="text-gray-500 text-xs mt-1">
+              <p className="text-gray-500 dark:text-gray-500 text-xs mt-1">
                 Built with passion for education and innovation.
               </p>
             </div>

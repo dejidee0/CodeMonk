@@ -17,16 +17,16 @@ export default function CourseDetail() {
 
   if (!course) {
     return (
-      <main className="w-full h-screen flex items-center justify-center bg-gray-100 text-xl text-gray-600">
+      <main className="w-full h-screen flex items-center justify-center bg-gray-100 dark:bg-gray-900 text-xl text-gray-600 dark:text-gray-300">
         Course not found.
       </main>
     );
   }
 
   return (
-    <main className="w-full min-h-screen bg-white text-gray-900 font-sans">
+    <main className="w-full min-h-screen bg-white dark:bg-gray-950 text-gray-900 dark:text-gray-100 font-sans">
       {/* Hero */}
-      <section className="w-full relative h-[450px] overflow-hidden bg-gray-200">
+      <section className="w-full relative h-[450px] overflow-hidden bg-gray-200 dark:bg-gray-800">
         <Image
           src={course.image}
           alt={`${course.title} cover`}
@@ -52,22 +52,26 @@ export default function CourseDetail() {
         {/* Pricing & Stats */}
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 items-center text-lg">
           <div className="space-y-1">
-            <p className="text-sm text-gray-500">Current Price</p>
+            <p className="text-sm text-gray-500 dark:text-gray-400">
+              Current Price
+            </p>
             <p className="text-3xl font-extrabold text-red-600">
-              ${course.price.toFixed(2)}{" "}
-              <span className="text-gray-400 text-lg line-through ml-2">
-                ${course.originalPrice.toFixed(2)}
+              ₦{(course.price.toFixed(2) * 1000).toLocaleString()}{" "}
+              <span className="text-gray-400 dark:text-gray-500 text-lg line-through ml-2">
+                ₦{(course.originalPrice.toFixed(2) * 1000).toLocaleString()}
               </span>
             </p>
           </div>
           <div>
-            <p className="text-sm text-gray-500">Students Enrolled</p>
+            <p className="text-sm text-gray-500 dark:text-gray-400">
+              Students Enrolled
+            </p>
             <p className="font-bold">
               {course.studentsEnrolled.toLocaleString()}
             </p>
           </div>
           <div>
-            <p className="text-sm text-gray-500">Rating</p>
+            <p className="text-sm text-gray-500 dark:text-gray-400">Rating</p>
             <p className="font-bold text-yellow-500">{course.rating} ⭐</p>
           </div>
         </div>
@@ -75,24 +79,31 @@ export default function CourseDetail() {
         {/* Instructor */}
         <section>
           <h2 className="text-2xl font-bold mb-3">Instructor</h2>
-          <div className="bg-gray-50 rounded-xl p-6 shadow-sm">
+          <div className="bg-gray-50 dark:bg-gray-900 rounded-xl p-6 shadow-sm">
             <p className="font-semibold text-lg">{course.instructor}</p>
-            <p className="text-gray-600">{course.instructorBio}</p>
+            <p className="text-gray-600 dark:text-gray-300">
+              {course.instructorBio}
+            </p>
           </div>
         </section>
 
         {/* Description */}
         <section>
           <h2 className="text-2xl font-bold mb-3">Course Description</h2>
-          <p className="text-gray-700 leading-relaxed">{course.description}</p>
+          <p className="text-gray-700 dark:text-gray-300 leading-relaxed">
+            {course.description}
+          </p>
         </section>
 
         {/* Skills */}
         <section>
           <h2 className="text-2xl font-bold mb-3">Skills You'll Gain</h2>
-          <ul className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3 text-gray-700">
+          <ul className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3 text-gray-700 dark:text-gray-300">
             {course.skills.map((skill) => (
-              <li key={skill} className="bg-gray-100 rounded px-4 py-2">
+              <li
+                key={skill}
+                className="bg-gray-100 dark:bg-gray-800 rounded px-4 py-2"
+              >
                 {skill}
               </li>
             ))}
@@ -102,7 +113,7 @@ export default function CourseDetail() {
         {/* Prerequisites */}
         <section>
           <h2 className="text-2xl font-bold mb-3">Prerequisites</h2>
-          <ul className="list-disc pl-6 space-y-2 text-gray-700">
+          <ul className="list-disc pl-6 space-y-2 text-gray-700 dark:text-gray-300">
             {course.prerequisites.map((pre) => (
               <li key={pre}>{pre}</li>
             ))}
@@ -116,10 +127,10 @@ export default function CourseDetail() {
             {course.curriculum.map(({ module, lessons }) => (
               <div
                 key={module}
-                className="border border-gray-100 p-5 rounded-lg shadow-sm bg-white"
+                className="border border-gray-100 dark:border-gray-800 p-5 rounded-lg shadow-sm bg-white dark:bg-gray-900"
               >
                 <h3 className="text-lg font-semibold mb-2">{module}</h3>
-                <ul className="list-disc list-inside space-y-1 text-gray-700">
+                <ul className="list-disc list-inside space-y-1 text-gray-700 dark:text-gray-300">
                   {lessons.map((lesson) => (
                     <li key={lesson}>{lesson}</li>
                   ))}
@@ -132,7 +143,7 @@ export default function CourseDetail() {
         {/* What You Will Learn */}
         <section>
           <h2 className="text-2xl font-bold mb-3">What You’ll Learn</h2>
-          <ul className="list-disc pl-6 space-y-2 text-gray-700">
+          <ul className="list-disc pl-6 space-y-2 text-gray-700 dark:text-gray-300">
             {course.whatYouWillLearn.map((point) => (
               <li key={point}>{point}</li>
             ))}
@@ -142,9 +153,12 @@ export default function CourseDetail() {
         {/* Features */}
         <section>
           <h2 className="text-2xl font-bold mb-3">Course Features</h2>
-          <ul className="grid grid-cols-1 sm:grid-cols-2 gap-2 text-gray-700">
+          <ul className="grid grid-cols-1 sm:grid-cols-2 gap-2 text-gray-700 dark:text-gray-300">
             {course.features.map((feature) => (
-              <li key={feature} className="bg-gray-100 px-4 py-2 rounded">
+              <li
+                key={feature}
+                className="bg-gray-100 dark:bg-gray-800 px-4 py-2 rounded"
+              >
                 {feature}
               </li>
             ))}
@@ -172,8 +186,7 @@ export default function CourseDetail() {
             href={whatsappURL}
             target="_blank"
             rel="noopener noreferrer"
-            className="inline-block px-8 py-4 text-xl bg-green-600 hover:bg-green-700
-               transition text-white font-semibold rounded-lg shadow"
+            className="inline-block px-8 py-4 text-xl bg-green-600 hover:bg-green-700 transition text-white font-semibold rounded-lg shadow"
           >
             <span className="inline-flex items-center gap-2">
               Enroll via WhatsApp
@@ -182,7 +195,7 @@ export default function CourseDetail() {
               </svg>
             </span>
           </a>
-          <p className="mt-2 text-gray-500 text-sm">
+          <p className="mt-2 text-gray-500 dark:text-gray-400 text-sm">
             Opens WhatsApp with a pre-filled message
           </p>
         </div>

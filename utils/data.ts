@@ -3,32 +3,32 @@ import { Testimonial, Instructor, BlogPost } from "../types";
 export const testimonials: Testimonial[] = [
   {
     id: "1",
-    name: "Alex Johnson",
+    name: "Joshua Akinlade",
     role: "Frontend Developer",
     company: "TechCorp",
     content:
       "The React Developer Bootcamp completely transformed my career. I went from struggling with basic concepts to confidently building complex applications in just 8 weeks.",
-    image: "https://images.pexels.com/photos/220453/pexels-photo-220453.jpeg",
+    image: "/student1.jpg",
     rating: 5,
   },
   {
     id: "2",
-    name: "Samantha Williams",
+    name: "Paul Adegbenro",
     role: "Data Scientist",
     company: "DataInsights",
     content:
       "The Python for Data Science course provided me with all the skills I needed to transition into a new role. The instructor was incredibly knowledgeable and supportive.",
-    image: "https://images.pexels.com/photos/774909/pexels-photo-774909.jpeg",
+    image: "/student2.jpg",
     rating: 5,
   },
   {
     id: "3",
-    name: "Raj Patel",
+    name: "Timothy Williams",
     role: "Full-Stack Developer",
     company: "WebSolutions",
     content:
       "After completing the Full-Stack JavaScript Masterclass, I was able to build and deploy complete web applications. The course was challenging but incredibly rewarding.",
-    image: "https://images.pexels.com/photos/2379004/pexels-photo-2379004.jpeg",
+    image: "/student3.jpg",
     rating: 4,
   },
 ];
