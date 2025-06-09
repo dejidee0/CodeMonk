@@ -42,7 +42,7 @@ export const Navbar: React.FC = () => {
           >
             <div className="relative">
               <div className="w-10 h-10 bg-gradient-to-br from-blue-600 to-teal-600 rounded-lg flex items-center justify-center transform group-hover:rotate-12 transition-transform duration-300">
-                <BookOpen className="h-6 w-6 text-white" />
+                <img src="/logo.png" className="h-12 w-12 text-white" />
               </div>
               <div className="absolute -top-1 -right-1 w-4 h-4 bg-gradient-to-br from-teal-500 to-blue-500 rounded-full opacity-80"></div>
             </div>

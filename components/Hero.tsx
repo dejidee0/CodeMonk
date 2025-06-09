@@ -244,9 +244,9 @@ const Hero: React.FC = () => {
       <div className="container mx-auto px-4 md:px-6 mt-20 relative z-10">
         <div className="grid grid-cols-2 md:grid-cols-4 gap-8 max-w-6xl mx-auto">
           {[
-            { number: "25+", label: "Expert Courses", delay: "0" },
-            { number: "15k+", label: "Students Trained", delay: "200" },
-            { number: "500+", label: "Websites Built", delay: "400" },
+            { number: "10+", label: "Expert Courses", delay: "0" },
+            { number: "65+", label: "Students Trained", delay: "200" },
+            { number: "25+", label: "Websites Built", delay: "400" },
             { number: "98%", label: "Client Satisfaction", delay: "600" },
           ].map((stat, index) => (
             <div

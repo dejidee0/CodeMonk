@@ -40,10 +40,10 @@ const values = [
 ];
 
 const achievements = [
-  { num: "15,000+", label: "Students Trained" },
-  { num: "500+", label: "Projects Delivered" },
+  { num: "65+", label: "Students Trained" },
+  { num: "25+", label: "Projects Delivered" },
   { num: "98%", label: "Satisfaction Rate" },
-  { num: "5+", label: "Years of Experience" },
+  { num: "7+", label: "Years of Experience" },
 ];
 
 const services = [
@@ -114,6 +114,16 @@ const team = [
     linkedin: "https://linkedin.com/in/emilydavis",
   },
 ];
+const founder = {
+  name: "Adedeji Mike",
+  role: "Founder & Software Architect",
+  bio: "Mike is a seasoned Software Architect passionate about building scalable digital experiences and empowering developers through education. With a keen eye for clean design and smart architecture, he’s driven by innovation and results.",
+  photo: "/founder.jpg", // Replace with actual image path
+  whatsapp:
+    "https://wa.me/2348062907833?text=Hi%20Mike%2C%20I%20just%20visited%20your%20site%20and%20would%20love%20to%20connect!",
+  instagram: "https://instagram.com/daniel_aboderin", // Replace with real username
+  linkedin: "https://www.linkedin.com/in/adedejimike",
+};
 
 function classNames(...classes: string[]) {
   return classes.filter(Boolean).join(" ");
@@ -264,6 +274,96 @@ export default function About() {
               </motion.article>
             ))}
           </div>
+        </div>
+      </section>
+      {/* Meet the Founder */}
+      <section className="py-24 bg-gray-50">
+        <div className="container mx-auto px-6 max-w-5xl flex flex-col md:flex-row items-center gap-16">
+          {/* Image */}
+          <motion.div
+            initial={{ opacity: 0, x: -30 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6 }}
+            className="flex-shrink-0 w-full max-w-sm mx-auto md:mx-0"
+          >
+            <Image
+              src={founder.photo}
+              alt={`Photo of ${founder.name}`}
+              width={400}
+              height={400}
+              className="rounded-3xl shadow-xl object-cover"
+              priority
+            />
+          </motion.div>
+
+          {/* Text */}
+          <motion.div
+            initial={{ opacity: 0, x: 30 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6 }}
+            className="text-center md:text-left space-y-6"
+          >
+            <h2 className="text-4xl font-bold text-gray-900">
+              Meet the Founder
+            </h2>
+            <p className="text-lg text-gray-700 leading-relaxed">
+              {founder.bio}
+            </p>
+            <div className="flex justify-center md:justify-start gap-4 mt-4">
+              {/* WhatsApp */}
+              <a
+                href={founder.whatsapp}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center bg-green-500 text-white px-4 py-2 rounded-lg hover:bg-green-600 transition shadow-md"
+              >
+                <svg
+                  className="w-5 h-5 mr-2"
+                  fill="currentColor"
+                  viewBox="0 0 24 24"
+                >
+                  <path d="M20.52 3.48A11.94 11.94 0 0012 0C5.38 0 0 5.38 0 12a11.9 11.9 0 001.69 6.19L0 24l5.91-1.55A11.94 11.94 0 0012 24c6.63 0 12-5.37 12-12 0-3.19-1.24-6.19-3.48-8.52zM12 22a9.88 9.88 0 01-5.31-1.55l-.38-.23-3.5.91.94-3.4-.25-.35A9.85 9.85 0 012 12c0-5.52 4.48-10 10-10s10 4.48 10 10-4.48 10-10 10zm5.2-7.77c-.29-.15-1.72-.85-1.98-.95s-.46-.15-.65.15-.75.94-.92 1.14-.34.22-.63.07a8.11 8.11 0 01-2.4-1.48 9.17 9.17 0 01-1.71-2.12c-.18-.3-.02-.46.13-.6.14-.13.31-.34.46-.52.16-.19.21-.32.32-.53.1-.21.05-.39-.03-.54s-.65-1.56-.9-2.13c-.24-.57-.49-.49-.68-.5h-.58c-.2 0-.52.08-.79.37s-1.04 1.02-1.04 2.5 1.07 2.88 1.23 3.08 2.1 3.21 5.09 4.5c.71.3 1.26.48 1.69.61.71.22 1.36.19 1.87.12.57-.08 1.72-.7 1.96-1.37.24-.66.24-1.22.17-1.34s-.27-.21-.56-.36z" />
+                </svg>
+                WhatsApp
+              </a>
+
+              {/* Instagram */}
+              <a
+                href={founder.instagram}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center bg-pink-500 text-white px-4 py-2 rounded-lg hover:bg-pink-600 transition shadow-md"
+              >
+                <svg
+                  className="w-5 h-5 mr-2"
+                  fill="currentColor"
+                  viewBox="0 0 24 24"
+                >
+                  <path d="M7.75 2h8.5A5.76 5.76 0 0122 7.75v8.5A5.76 5.76 0 0116.25 22h-8.5A5.76 5.76 0 012 16.25v-8.5A5.76 5.76 0 017.75 2zm0 2A3.75 3.75 0 004 7.75v8.5A3.75 3.75 0 007.75 20h8.5A3.75 3.75 0 0020 16.25v-8.5A3.75 3.75 0 0016.25 4h-8.5zM12 7a5 5 0 110 10 5 5 0 010-10zm0 2a3 3 0 100 6 3 3 0 000-6zm5.5-.25a1.25 1.25 0 110 2.5 1.25 1.25 0 010-2.5z" />
+                </svg>
+                Instagram
+              </a>
+
+              {/* LinkedIn */}
+              <a
+                href={founder.linkedin}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center bg-blue-700 text-white px-4 py-2 rounded-lg hover:bg-blue-800 transition shadow-md"
+              >
+                <svg
+                  className="w-5 h-5 mr-2"
+                  fill="currentColor"
+                  viewBox="0 0 24 24"
+                >
+                  <path d="M4.98 3.5C4.98 5.43 3.4 7 1.5 7S-2 5.43-2 3.5 0.57 0 2.5 0 4.98 1.57 4.98 3.5zM.5 8h4V24h-4V8zm7.5 0h3.7v2.2h.1c.5-.8 1.7-2.2 4-2.2 4.3 0 5.1 2.8 5.1 6.5V24h-4v-7.6c0-1.8-.1-4-2.5-4s-2.9 1.9-2.9 3.9V24h-4V8z" />
+                </svg>
+                LinkedIn
+              </a>
+            </div>
+          </motion.div>
         </div>
       </section>
 

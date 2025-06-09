@@ -353,4 +353,263 @@ export const courses: Course[] = [
     support: "Dedicated support team available weekdays 9am–6pm",
     access: "Lifetime access with free course material updates",
   },
+  {
+    id: "cybersecurity-foundations",
+    title: "Cybersecurity Foundations",
+    description:
+      "Understand the core principles of cybersecurity. This 8-week course covers threat modeling, network security, ethical hacking, cryptography, and incident response. Perfect for beginners aiming to enter the rapidly growing cybersecurity industry.",
+    category: "Cybersecurity",
+    level: "Beginner",
+    duration: "8 weeks",
+    price: 279,
+    originalPrice: 379,
+    instructor: "Amira Johnson",
+    instructorBio:
+      "Cybersecurity Consultant with 10+ years of experience at Deloitte and IBM. Certified Ethical Hacker (CEH) and CISSP holder with a passion for securing digital infrastructures and mentoring new professionals.",
+    rating: 4.8,
+    studentsEnrolled: 7265,
+    image:
+      "https://images.pexels.com/photos/5380659/pexels-photo-5380659.jpeg?auto=compress&cs=tinysrgb&w=800",
+    skills: [
+      "Cybersecurity fundamentals",
+      "Network and system security",
+      "Threat analysis and mitigation",
+      "Security tools (Wireshark, Metasploit)",
+      "Introduction to cryptography",
+      "Incident response planning",
+      "Ethical hacking basics",
+      "Vulnerability assessment",
+    ],
+    prerequisites: [
+      "Basic IT knowledge",
+      "Familiarity with operating systems",
+      "No prior cybersecurity experience required",
+    ],
+    curriculum: [
+      {
+        module: "Security Principles & Threats",
+        lessons: [
+          "Introduction to Cybersecurity and Threat Landscape",
+          "Security Goals: Confidentiality, Integrity, Availability",
+          "Types of Cyber Threats and Vulnerabilities",
+          "Malware, Phishing, and Social Engineering",
+        ],
+      },
+      {
+        module: "Network & System Security",
+        lessons: [
+          "Understanding TCP/IP and Firewalls",
+          "Network Monitoring and Intrusion Detection Systems (IDS)",
+          "System Hardening and Patch Management",
+          "Linux and Windows Security Basics",
+        ],
+      },
+      {
+        module: "Ethical Hacking & Cryptography",
+        lessons: [
+          "Footprinting and Reconnaissance",
+          "Scanning and Enumeration",
+          "Introduction to Encryption and Hashing",
+          "Public Key Infrastructure (PKI)",
+        ],
+      },
+      {
+        module: "Incident Response & Final Project",
+        lessons: [
+          "Incident Response Lifecycle",
+          "Security Policies and Compliance (GDPR, ISO)",
+          "Simulated Breach Response Scenario",
+          "Final Capstone: Investigate and Defend a Cyber Attack",
+        ],
+      },
+    ],
+    whatYouWillLearn: [
+      "Build foundational cybersecurity knowledge",
+      "Use common cybersecurity tools",
+      "Understand and analyze cyber threats",
+      "Create basic incident response plans",
+      "Gain exposure to ethical hacking concepts",
+      "Learn how cryptographic systems protect data",
+    ],
+    features: [
+      "40+ hours of training content",
+      "Hands-on labs in virtual environments",
+      "Weekly real-world security case studies",
+      "Mock interviews and certification prep",
+      "Dedicated Discord community",
+    ],
+    certificate: true,
+    support: "Live office hours and community forum access",
+    access: "Lifetime access with future updates included",
+  },
+  {
+    id: "product-management-essentials",
+    title: "Product Management Essentials",
+    description:
+      "Learn how to build and manage successful products from ideation to launch. This 6-week course covers user research, MVP development, agile workflows, roadmapping, and stakeholder communication, designed for aspiring and junior product managers.",
+    category: "Product Management",
+    level: "Beginner",
+    duration: "6 weeks",
+    price: 229,
+    originalPrice: 329,
+    instructor: "Emily Davis",
+    instructorBio:
+      "Senior Product Manager at Airbnb with a decade of experience building customer-first digital experiences. Former UX researcher turned product strategist focused on outcome-driven development.",
+    rating: 4.7,
+    studentsEnrolled: 4021,
+    image:
+      "https://images.pexels.com/photos/3184325/pexels-photo-3184325.jpeg?auto=compress&cs=tinysrgb&w=800",
+    skills: [
+      "Product lifecycle management",
+      "Agile methodologies (Scrum/Kanban)",
+      "Roadmapping and release planning",
+      "User research and persona development",
+      "Stakeholder communication",
+      "Minimum Viable Product (MVP) design",
+      "KPIs and product metrics",
+      "Cross-functional team leadership",
+    ],
+    prerequisites: [
+      "Basic understanding of business or tech concepts",
+      "No prior product management experience required",
+    ],
+    curriculum: [
+      {
+        module: "Introduction to Product Management",
+        lessons: [
+          "What is Product Management?",
+          "PM Roles and Responsibilities",
+          "Key Product Metrics and KPIs",
+        ],
+      },
+      {
+        module: "User-Centered Product Development",
+        lessons: [
+          "Conducting User Research and Surveys",
+          "Creating Personas and Journey Maps",
+          "Validating Product Ideas",
+        ],
+      },
+      {
+        module: "Agile Development and Roadmapping",
+        lessons: [
+          "Scrum vs Kanban",
+          "Backlog Grooming and Sprint Planning",
+          "Writing Effective User Stories",
+          "Creating and Prioritizing Roadmaps",
+        ],
+      },
+      {
+        module: "Launch Strategy & Final Pitch",
+        lessons: [
+          "Go-to-Market Planning",
+          "Managing Stakeholders and Engineers",
+          "Final Capstone: Build and Pitch Your Product",
+        ],
+      },
+    ],
+    whatYouWillLearn: [
+      "Understand the full product lifecycle",
+      "Lead agile product development processes",
+      "Translate user insights into product ideas",
+      "Communicate effectively with stakeholders",
+      "Prioritize features using industry best practices",
+      "Design a compelling product pitch",
+    ],
+    features: [
+      "30+ hours of course material",
+      "Project-based assignments and final pitch",
+      "Case studies from top tech companies",
+      "Live mentor sessions weekly",
+      "Certificate portfolio-ready project",
+    ],
+    certificate: true,
+    support: "Slack and email support with weekly Q&A",
+    access: "Lifetime access with downloadable templates",
+  },
+  {
+    id: "data-analytics-bootcamp",
+    title: "Data Analytics Bootcamp",
+    description:
+      "Master the tools and techniques of data analysis in just 9 weeks. Learn Excel, SQL, Tableau, and data storytelling while working on real datasets. Perfect for beginners aiming to enter analytics, business intelligence, or data-driven decision-making roles.",
+    category: "Data Analytics",
+    level: "Beginner",
+    duration: "9 weeks",
+    price: 299,
+    originalPrice: 399,
+    instructor: "Nikhil Sharma",
+    instructorBio:
+      "Business Intelligence Analyst at Meta with 8+ years of experience in data analytics and visualization. Expert in SQL, Excel, and Tableau with a passion for teaching data-driven storytelling.",
+    rating: 4.8,
+    studentsEnrolled: 5912,
+    image:
+      "https://images.pexels.com/photos/669619/pexels-photo-669619.jpeg?auto=compress&cs=tinysrgb&w=800",
+    skills: [
+      "Microsoft Excel (formulas, pivot tables, dashboards)",
+      "SQL for data querying",
+      "Tableau for visualization",
+      "Data cleaning and preparation",
+      "Data storytelling and dashboards",
+      "Business metrics and KPIs",
+      "A/B testing fundamentals",
+      "Presentation and communication of insights",
+    ],
+    prerequisites: [
+      "Basic computer skills",
+      "Comfort with numbers and charts",
+      "No programming experience required",
+    ],
+    curriculum: [
+      {
+        module: "Excel for Analytics",
+        lessons: [
+          "Formulas and Functions",
+          "Charts, Pivot Tables, and Conditional Formatting",
+          "Data Cleaning in Excel",
+        ],
+      },
+      {
+        module: "SQL for Data Extraction",
+        lessons: [
+          "SQL Syntax and Queries",
+          "Filtering, Sorting, and Aggregations",
+          "Joins, Subqueries, and Views",
+        ],
+      },
+      {
+        module: "Visualization and Storytelling",
+        lessons: [
+          "Getting Started with Tableau",
+          "Designing Dashboards and Reports",
+          "Telling Data Stories with Visuals",
+        ],
+      },
+      {
+        module: "Capstone and Business Insights",
+        lessons: [
+          "Case Study: E-commerce Data Analysis",
+          "A/B Testing Concepts",
+          "Final Project: Present Data Insights to Stakeholders",
+        ],
+      },
+    ],
+    whatYouWillLearn: [
+      "Clean, analyze, and visualize data",
+      "Write SQL queries for data extraction",
+      "Use Excel and Tableau to create dashboards",
+      "Interpret key business metrics",
+      "Communicate insights effectively",
+      "Build a data analytics portfolio project",
+    ],
+    features: [
+      "45+ hours of training with hands-on practice",
+      "Access to datasets and case studies",
+      "Instructor feedback on capstone projects",
+      "Live weekly workshops and office hours",
+      "Portfolio-ready final presentation",
+    ],
+    certificate: true,
+    support: "Email and community support with weekly check-ins",
+    access: "Lifetime access to all materials and updates",
+  },
 ];
