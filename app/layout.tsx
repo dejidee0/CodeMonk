@@ -4,7 +4,7 @@ import { ClientShell } from "@/components/ClientShell";
 // new wrapper
 
 export const metadata: Metadata = {
-  title: "Codemonk",
+  title: "Codewithmonk",
   description: "Learn. Build. Grow.",
 };
 

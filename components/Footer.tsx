@@ -58,7 +58,7 @@ export const Footer: React.FC = () => {
               </div>
               <div>
                 <h3 className="text-xl font-bold bg-gradient-to-r from-blue-400 to-teal-400 bg-clip-text text-transparent">
-                  Codemonk
+                  Codewithmonk
                 </h3>
                 <p className="text-xs text-gray-400">Learn • Build • Grow</p>
               </div>
@@ -70,7 +70,7 @@ export const Footer: React.FC = () => {
             <div className="space-y-3">
               <div className="flex items-center text-gray-300">
                 <Mail className="h-4 w-4 mr-3 text-blue-400" />
-                <span className="text-sm">hello@Codemonk.com</span>
+                <span className="text-sm">hello@codewithmonk.com</span>
               </div>
               <div className="flex items-center text-gray-300">
                 <Phone className="h-4 w-4 mr-3 text-blue-400" />
@@ -162,7 +162,7 @@ export const Footer: React.FC = () => {
             </div>
             <div className="text-center md:text-right">
               <p className="text-gray-400 text-sm">
-                © {currentYear} Codemonk. All rights reserved.
+                © {currentYear} Codewithmonk. All rights reserved.
               </p>
               <p className="text-gray-500 text-xs mt-1">
                 Built with passion for education and innovation.

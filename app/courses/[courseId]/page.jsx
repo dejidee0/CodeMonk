@@ -54,9 +54,9 @@ export default function CourseDetail() {
           <div className="space-y-1">
             <p className="text-sm text-gray-500">Current Price</p>
             <p className="text-3xl font-extrabold text-red-600">
-              ${course.price.toFixed(2)}{" "}
+              ₦{course.price.toLocaleString()}{" "}
               <span className="text-gray-400 text-lg line-through ml-2">
-                ${course.originalPrice.toFixed(2)}
+                ₦{course.originalPrice.toLocaleString()}
               </span>
             </p>
           </div>
@@ -131,7 +131,7 @@ export default function CourseDetail() {
 
         {/* What You Will Learn */}
         <section>
-          <h2 className="text-2xl font-bold mb-3">What You’ll Learn</h2>
+          <h2 className="text-2xl font-bold mb-3">What You'll Learn</h2>
           <ul className="list-disc pl-6 space-y-2 text-gray-700">
             {course.whatYouWillLearn.map((point) => (
               <li key={point}>{point}</li>

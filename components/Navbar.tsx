@@ -52,7 +52,7 @@ export const Navbar: React.FC = () => {
                   isScrolled ? "" : "text-white"
                 }`}
               >
-                Codemonk
+                Codewithmonk
               </h1>
               <p
                 className={`text-xs ${

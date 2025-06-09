@@ -9,15 +9,15 @@ export const createWhatsAppLink = (
   }
 ) => {
   const text = `
-Hi! 👋 I’d like to enroll in the course:
+Hi! 👋 I'd like to enroll in the course:
 
 • Title: ${course.title}
 • Level: ${course.level}
 • Duration: ${course.duration}
-• Price: $${course.price.toFixed(2)}
+• Price: ₦${course.price.toLocaleString()}
 
 Please send me the next steps.
   `.trim();
 
-  return `https://wa.me/${"+2349153897950"}?text=${encodeURIComponent(text)}`;
+  return `https://wa.me/${"+2348062907833"}?text=${encodeURIComponent(text)}`;
 };

@@ -52,7 +52,7 @@ const WelcomeModal = () => {
             </div>
 
             <h2 className="text-2xl font-bold text-zinc-800 dark:text-white">
-              Welcome to CodewithMonk Company Website 💫
+              Welcome to Codewithmonk Company Website 💫
             </h2>
             <p className="mt-2 text-zinc-500 dark:text-zinc-300">
               Connect, Explore and Partner with us in giving you a wonderful web

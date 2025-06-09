@@ -35,7 +35,7 @@ const Contact: React.FC = () => {
   const generateWhatsAppMessage = () => {
     const { name, email, service, message } = formData;
     return encodeURIComponent(
-      `Hello! I&apos;m interested in your services.\n\n*Name:* ${name}\n*Email:* ${email}\n*Service Interest:* ${service}\n*Message:* ${message}\n\nI&apos;d like to learn more about how Codemonk can help me achieve my goals.`
+      `Hello! I&apos;m interested in your services.\n\n*Name:* ${name}\n*Email:* ${email}\n*Service Interest:* ${service}\n*Message:* ${message}\n\nI&apos;d like to learn more about how Codewithmonk can help me achieve my goals.`
     );
   };
 
@@ -62,7 +62,7 @@ const Contact: React.FC = () => {
     {
       icon: Mail,
       title: "Email Us",
-      content: "hello@Codemonk.com",
+      content: "hello@codewithmonk.com",
       description: "Send us an email anytime",
     },
     {
@@ -170,7 +170,7 @@ const Contact: React.FC = () => {
                     },
                   ].map(({ label, type, name, placeholder }) => (
                     <div key={name}>
-                      <label htmlFor={name} className="...">
+                      <label htmlFor={name} className="block text-sm font-medium text-gray-700 mb-2">
                         {label} *
                       </label>
                       <input
@@ -179,7 +179,7 @@ const Contact: React.FC = () => {
                         name={name}
                         value={formData[name]}
                         onChange={handleInputChange}
-                        className="..."
+                        className="w-full px-4 py-3 border border-gray-300 text-black rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-colors"
                         placeholder={placeholder}
                         required
                       />

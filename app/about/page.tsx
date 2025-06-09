@@ -72,56 +72,57 @@ const services = [
 
 const testimonials = [
   {
-    name: "Aisha",
+    name: "Adunni Okafor",
     role: "Full Stack Developer",
-    msg: "This company’s training transformed my career. The instructors are knowledgeable and supportive.",
-    avatar: "/avatars/aisha.jpg",
+    msg: "This company's training transformed my career. The instructors are knowledgeable and supportive.",
+    avatar: "https://images.pexels.com/photos/1239291/pexels-photo-1239291.jpeg",
   },
   {
-    name: "Daniel",
+    name: "Chinedu Okoro",
     role: "Data Analyst",
     msg: "Excellent hands-on learning with real-world projects. The support team is always responsive.",
-    avatar: "/avatars/daniel.jpg",
+    avatar: "https://images.pexels.com/photos/2182970/pexels-photo-2182970.jpeg",
   },
   {
-    name: "Chloe",
+    name: "Kemi Adebayo",
     role: "Product Manager",
     msg: "The product management training was thorough and practical. Highly recommend their courses!",
-    avatar: "/avatars/chloe.jpg",
+    avatar: "https://images.pexels.com/photos/774909/pexels-photo-774909.jpeg",
   },
 ];
 
 const team = [
   {
-    name: "Jane Doe",
+    name: "Funmi Adebayo",
     role: "CEO & Founder",
-    photo: "https://images.pexels.com/photos/2379005/pexels-photo-2379005.jpeg",
+    photo: "https://images.pexels.com/photos/1239291/pexels-photo-1239291.jpeg",
     bio: "Visionary leader with 10+ years in software development and education.",
-    linkedin: "https://linkedin.com/in/janedoe",
+    linkedin: "https://linkedin.com/in/funmiadebayo",
   },
   {
-    name: "John Smith",
+    name: "Emeka Okonkwo",
     role: "Lead Developer",
-    photo: "https://images.pexels.com/photos/2379005/pexels-photo-2379005.jpeg",
+    photo: "https://images.pexels.com/photos/2182970/pexels-photo-2182970.jpeg",
     bio: "Expert in scalable web applications and mentoring junior developers.",
-    linkedin: "https://linkedin.com/in/johnsmith",
+    linkedin: "https://linkedin.com/in/emekaokonkwo",
   },
   {
-    name: "Emily Davis",
-    role: "Head of Training=",
-    photo: "https://images.pexels.com/photos/2379005/pexels-photo-2379005.jpeg",
+    name: "Amina Hassan",
+    role: "Head of Training",
+    photo: "https://images.pexels.com/photos/774909/pexels-photo-774909.jpeg",
     bio: "Passionate educator focused on empowering the next generation of tech professionals.",
-    linkedin: "https://linkedin.com/in/emilydavis",
+    linkedin: "https://linkedin.com/in/aminahassan",
   },
 ];
+
 const founder = {
   name: "Adedeji Mike",
   role: "Founder & Software Architect",
-  bio: "Mike is a seasoned Software Architect passionate about building scalable digital experiences and empowering developers through education. With a keen eye for clean design and smart architecture, he’s driven by innovation and results.",
-  photo: "/founder.jpg", // Replace with actual image path
+  bio: "Mike is a seasoned Software Architect passionate about building scalable digital experiences and empowering developers through education. With a keen eye for clean design and smart architecture, he's driven by innovation and results.",
+  photo: "/founder.jpg",
   whatsapp:
     "https://wa.me/2348062907833?text=Hi%20Mike%2C%20I%20just%20visited%20your%20site%20and%20would%20love%20to%20connect!",
-  instagram: "https://instagram.com/daniel_aboderin", // Replace with real username
+  instagram: "https://instagram.com/daniel_aboderin",
   linkedin: "https://www.linkedin.com/in/adedejimike",
 };
 
@@ -324,7 +325,7 @@ export default function About() {
                   fill="currentColor"
                   viewBox="0 0 24 24"
                 >
-                  <path d="M20.52 3.48A11.94 11.94 0 0012 0C5.38 0 0 5.38 0 12a11.9 11.9 0 001.69 6.19L0 24l5.91-1.55A11.94 11.94 0 0012 24c6.63 0 12-5.37 12-12 0-3.19-1.24-6.19-3.48-8.52zM12 22a9.88 9.88 0 01-5.31-1.55l-.38-.23-3.5.91.94-3.4-.25-.35A9.85 9.85 0 012 12c0-5.52 4.48-10 10-10s10 4.48 10 10-4.48 10-10 10zm5.2-7.77c-.29-.15-1.72-.85-1.98-.95s-.46-.15-.65.15-.75.94-.92 1.14-.34.22-.63.07a8.11 8.11 0 01-2.4-1.48 9.17 9.17 0 01-1.71-2.12c-.18-.3-.02-.46.13-.6.14-.13.31-.34.46-.52.16-.19.21-.32.32-.53.1-.21.05-.39-.03-.54s-.65-1.56-.9-2.13c-.24-.57-.49-.49-.68-.5h-.58c-.2 0-.52.08-.79.37s-1.04 1.02-1.04 2.5 1.07 2.88 1.23 3.08 2.1 3.21 5.09 4.5c.71.3 1.26.48 1.69.61.71.22 1.36.19 1.87.12.57-.08 1.72-.7 1.96-1.37.24-.66.24-1.22.17-1.34s-.27-.21-.56-.36z" />
+                  <path d="M20.52 3.48A11.94 11.94 0 0012 0C5.38 0 0 5.38 0 12a11.9 11.9 0 001.69 6.19L0 24l5.91-1.55A11.94 11.94 0 0012 24c6.63 0 12-5.37 12-12 0-3.19-1.24-6.19-3.48-8.52zM12 22a9.88 9.88 0 01-5.31-1.55l-.38-.23-3.5.91.94-3.4-.25-.35A9.85 9.85 0 012 12c0-5.52 4.48-10 10-10s10 4.48 10 10-4.48 10-10 10zm5.2-7.77c-.29-.15-1.72-.85-1.98-.95s-.46-.15-.65.15-.75.94-.92 1.14-.34.22-.63.07a8.11 8.11 0 01-2.4-1.48 9.17 9.17 0 01-1.71-2.12c-.18-.3-.02-.46.13-.6.14-.13.31-.34.46-.52.16-.19.21-.32.32-.53.1-.21.05-.39-.03-.54s-.65-1.56-.9-2.13c-.24-.57-.49-.49-.68-.5h-.58c-.2 0-.52.08-.79.37s-1.04 1.02-1.04 2.5 1.07 2.88 1.23 3.08s2.1 3.21 5.09 4.5c.71.3 1.26.48 1.69.61.71.22 1.36.19 1.87.12.57-.08 1.72-.7 1.96-1.37.24-.66.24-1.22.17-1.34s-.27-.21-.56-.36z" />
                 </svg>
                 WhatsApp
               </a>
@@ -479,7 +480,7 @@ export default function About() {
                   className="rounded-full mb-6 object-cover"
                   priority
                 />
-                <p className="text-gray-900 italic text-lg mb-6">“{msg}”</p>
+                <p className="text-gray-900 italic text-lg mb-6">"{msg}"</p>
                 <footer className="text-indigo-900 font-semibold">
                   {name}
                 </footer>
