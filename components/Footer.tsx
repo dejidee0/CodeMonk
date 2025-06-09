@@ -42,8 +42,16 @@ export const Footer: React.FC = () => {
   const socialLinks = [
     { icon: Facebook, href: "#", label: "Facebook" },
     { icon: Twitter, href: "#", label: "Twitter" },
-    { icon: Linkedin, href: "#", label: "LinkedIn" },
-    { icon: Instagram, href: "#", label: "Instagram" },
+    {
+      icon: Linkedin,
+      href: "https://www.linkedin.com/in/adedejimike",
+      label: "LinkedIn",
+    },
+    {
+      icon: Instagram,
+      href: "https://www.instagram.com/techbro.mike",
+      label: "Instagram",
+    },
   ];
 
   return (
@@ -58,7 +66,7 @@ export const Footer: React.FC = () => {
               </div>
               <div>
                 <h3 className="text-xl font-bold bg-gradient-to-r from-blue-400 to-teal-400 bg-clip-text text-transparent">
-                  Codewithmonk Codewithmonk
+                  Codewithmonk
                 </h3>
                 <p className="text-xs text-gray-400 dark:text-gray-600">
                   Learn • Build • Grow
@@ -72,7 +80,7 @@ export const Footer: React.FC = () => {
             <div className="space-y-3">
               <div className="flex items-center text-gray-300 dark:text-gray-700">
                 <Mail className="h-4 w-4 mr-3 text-blue-400 dark:text-blue-600" />
-                <span className="text-sm">hello@Codewithmonk.com</span>
+                <span className="text-sm">codemonktech1@gmail.com</span>
               </div>
               <div className="flex items-center text-gray-300 dark:text-gray-700">
                 <Phone className="h-4 w-4 mr-3 text-blue-400 dark:text-blue-600" />

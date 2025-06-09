@@ -93,36 +93,37 @@ const testimonials = [
 
 const team = [
   {
-    name: "Funmi Adebayo",
+    name: "Adedeji Michael",
     role: "CEO & Founder",
-    photo: "https://images.pexels.com/photos/1239291/pexels-photo-1239291.jpeg",
+    photo: "/founder.jpg",
     bio: "Visionary leader with 10+ years in software development and education.",
-    linkedin: "https://linkedin.com/in/funmiadebayo",
+    linkedin: "https://www.linkedin.com/in/adedejimike",
   },
   {
-    name: "Emeka Okonkwo",
-    role: "Lead Developer",
-    photo: "https://images.pexels.com/photos/2182970/pexels-photo-2182970.jpeg",
+    name: "Aboderin Daniel",
+    role: "Full Stack Software Developer",
+    photo: "/daniel.jpg",
     bio: "Expert in scalable web applications and mentoring junior developers.",
-    linkedin: "https://linkedin.com/in/emekaokonkwo",
+    linkedin:
+      "https://wa.me/2349153897950?text=Hi%20Michael%2C%20I%20just%20visited%20your%20site%20and%20would%20love%20to%20connect!",
   },
   {
-    name: "Amina Hassan",
-    role: "Head of Training",
-    photo: "https://images.pexels.com/photos/774909/pexels-photo-774909.jpeg",
+    name: "Okechukwu Kingsley",
+    role: "Full Stack Software Developer",
+    photo: "/kingsley.jpg",
     bio: "Passionate educator focused on empowering the next generation of tech professionals.",
-    linkedin: "https://linkedin.com/in/aminahassan",
+    linkedin: "https://www.linkedin.com/in/gracious-kingsley",
   },
 ];
 
 const founder = {
-  name: "Adedeji Mike",
+  name: "Adedeji Michael",
   role: "Founder & Software Architect",
   bio: "Mike is a seasoned Software Architect passionate about building scalable digital experiences and empowering developers through education. With a keen eye for clean design and smart architecture, he's driven by innovation and results.",
   photo: "/founder.jpg",
   whatsapp:
-    "https://wa.me/2348062907833?text=Hi%20Mike%2C%20I%20just%20visited%20your%20site%20and%20would%20love%20to%20connect!",
-  instagram: "https://instagram.com/daniel_aboderin",
+    "https://wa.me/2348062907833?text=Hi%20Michael%2C%20I%20just%20visited%20your%20site%20and%20would%20love%20to%20connect!",
+  instagram: "https://www.instagram.com/techbro.mike",
   linkedin: "https://www.linkedin.com/in/adedejimike",
 };
 
@@ -249,6 +250,80 @@ export default function About() {
           </div>
         </div>
       </section>
+      {/* Past Projects Section */}
+      <section className="py-24 bg-white dark:bg-gray-900">
+        <div className="container mx-auto px-6 max-w-7xl text-center">
+          <h2 className="text-4xl font-bold mb-12 text-gray-900 dark:text-gray-100">
+            Our Past Projects
+          </h2>
+          <div className="grid gap-10 md:grid-cols-2 lg:grid-cols-2">
+            {[
+              {
+                title: "Bezaleel",
+                desc: "A real estate platform for showcasing luxury apartments and managing property listings.",
+                image: "/bezaleel.png",
+                link: "https://www.bezaleelcourt.com/",
+              },
+              {
+                title: "MoStore",
+                desc: "A sleek, scalable ecommerce solution tailored for modern online retail businesses.",
+                image: "/mostore.png",
+                link: "https://mostore-three.vercel.app/",
+              },
+              {
+                title: "Amy Afrique",
+                desc: "A vibrant platform for selling African art, connecting artists to global buyers.",
+                image: "/amy.png",
+                link: "https://www.amyafrique.net/",
+              },
+              {
+                title: "FindPeace",
+                desc: "Hotel Management System with Flight Booking and Event Ticketing",
+                image: "/findpeace.png",
+                link: "#",
+              },
+              {
+                title: "ChainGuard AI",
+                desc: "Hotel Management System with Flight Booking and Event Ticketing",
+                image: "/chainguard.png",
+                link: "https://chainguard-pink.vercel.app/",
+              },
+            ].map((proj, idx) => (
+              <motion.div
+                key={idx}
+                whileHover={{ scale: 1.03 }}
+                className="bg-gray-100 dark:bg-gray-800 rounded-xl overflow-hidden shadow-md hover:shadow-xl transition-shadow"
+              >
+                <div className="relative w-full h-48">
+                  <Image
+                    src={proj.image}
+                    alt={proj.title}
+                    layout="fill"
+                    objectFit="cover"
+                    className="rounded-t-xl"
+                  />
+                </div>
+                <div className="p-6 text-left">
+                  <h3 className="text-xl font-semibold text-gray-900 dark:text-gray-100 mb-2">
+                    {proj.title}
+                  </h3>
+                  <p className="text-gray-700 dark:text-gray-300 text-sm mb-4">
+                    {proj.desc}
+                  </p>
+                  <a
+                    href={proj.link}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-indigo-600 dark:text-indigo-400 font-medium hover:underline flex items-center gap-1"
+                  >
+                    View Project <ArrowRight className="w-4 h-4" />
+                  </a>
+                </div>
+              </motion.div>
+            ))}
+          </div>
+        </div>
+      </section>
 
       {/* Core Values */}
       <section className="py-20 bg-gray-50 dark:bg-gray-800">
@@ -356,39 +431,47 @@ export default function About() {
           <h2 className="text-4xl font-bold mb-12 text-gray-900 dark:text-white">
             Meet the Team
           </h2>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-12">
-            {team.map(({ name, role, photo, bio, linkedin }) => (
-              <article
-                key={name}
-                className="bg-indigo-50 dark:bg-gray-800 rounded-xl p-6 shadow-md flex flex-col items-center text-center"
-              >
-                <Image
-                  src={photo}
-                  alt={`Photo of ${name}`}
-                  width={160}
-                  height={160}
-                  className="rounded-full object-cover"
-                  priority
-                />
-                <h3 className="mt-6 text-xl font-semibold text-indigo-900 dark:text-white">
-                  {name}
-                </h3>
-                <p className="text-indigo-700 dark:text-indigo-300 mb-3 font-medium">
-                  {role}
-                </p>
-                <p className="text-gray-700 dark:text-gray-300 mb-5">{bio}</p>
-                <a
-                  href={linkedin}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="inline-flex items-center text-indigo-600 hover:text-indigo-800 dark:text-indigo-400 dark:hover:text-indigo-200 font-semibold"
-                  aria-label={`Visit LinkedIn profile of ${name}`}
+          <div className="container mx-auto px-4 sm:px-6 lg:px-8 py-12">
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-10 lg:gap-12">
+              {team.map(({ name, role, photo, bio, linkedin }) => (
+                <article
+                  key={name}
+                  className="bg-indigo-50 dark:bg-gray-800 rounded-xl p-6 shadow-md flex flex-col items-center text-center transition-transform hover:scale-[1.02]"
                 >
-                  View LinkedIn
-                  <ArrowRight size={18} className="ml-2" />
-                </a>
-              </article>
-            ))}
+                  {/* Image wrapper for consistent sizing */}
+                  <div className="w-52 h-52 rounded-full overflow-hidden">
+                    <Image
+                      src={photo}
+                      alt={`Photo of ${name}`}
+                      width={160}
+                      height={160}
+                      className="w-full h-full object-cover"
+                      priority
+                    />
+                  </div>
+
+                  <h3 className="mt-6 text-xl font-semibold text-indigo-900 dark:text-white">
+                    {name}
+                  </h3>
+                  <p className="text-indigo-700 dark:text-indigo-300 mb-2 font-medium">
+                    {role}
+                  </p>
+                  <p className="text-gray-700 dark:text-gray-300 mb-4 text-sm">
+                    {bio}
+                  </p>
+                  <a
+                    href={linkedin}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="inline-flex items-center text-indigo-600 hover:text-indigo-800 dark:text-indigo-400 dark:hover:text-indigo-200 font-semibold"
+                    aria-label={`Visit LinkedIn profile of ${name}`}
+                  >
+                    View LinkedIn
+                    <ArrowRight size={18} className="ml-2" />
+                  </a>
+                </article>
+              ))}
+            </div>
           </div>
         </div>
       </section>

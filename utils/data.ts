@@ -39,7 +39,7 @@ export const instructors: Instructor[] = [
     name: "Emeka Okonkwo",
     role: "Senior React Developer",
     bio: "Emeka has over 10 years of experience in web development and has worked with companies like Interswitch and Paystack. He specializes in React and modern JavaScript frameworks.",
-    image: "https://images.pexels.com/photos/2182970/pexels-photo-2182970.jpeg",
+    image: "/teach1.jpg",
     expertise: ["React", "JavaScript", "TypeScript", "Redux"],
     socialLinks: {
       twitter: "https://twitter.com/emekaokonkwo",
@@ -65,7 +65,7 @@ export const instructors: Instructor[] = [
     name: "Chinedu Okoro",
     role: "Full-Stack Developer",
     bio: "Chinedu is a seasoned full-stack developer with expertise in JavaScript, Node.js, and MongoDB. He has built numerous production-ready applications and mentored dozens of developers.",
-    image: "https://images.pexels.com/photos/2379004/pexels-photo-2379004.jpeg",
+    image: "/teach2.jpg",
     expertise: ["JavaScript", "Node.js", "Express", "MongoDB"],
     socialLinks: {
       twitter: "https://twitter.com/chineduokoro",

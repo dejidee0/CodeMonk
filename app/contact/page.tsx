@@ -63,7 +63,7 @@ const Contact: React.FC = () => {
     {
       icon: Mail,
       title: "Email Us",
-      content: "hello@Codewithmonk.com",
+      content: "codemonktech1@gmail.com",
       description: "Send us an email anytime",
     },
     {
