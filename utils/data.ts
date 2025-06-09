@@ -39,7 +39,7 @@ export const instructors: Instructor[] = [
     name: "Aboderin Daniel",
     role: "Senior React Developer",
     bio: "Daniel has over 10 years of experience in web development and has worked with companies like Jay Dermont Technologies and CodewithMonk. He specializes in React and modern JavaScript frameworks.",
-    image: "/teach1.jpg",
+    image: "/daniel.jpg",
     expertise: ["React", "JavaScript", "TypeScript", "Redux"],
     socialLinks: {
       twitter: "#",
