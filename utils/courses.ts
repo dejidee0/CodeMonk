@@ -11,9 +11,9 @@ export const courses: Course[] = [
     duration: "8 weeks",
     price: 300,
     originalPrice: 400,
-    instructor: "Sarah Chen",
+    instructor: "Aboderin Daniel",
     instructorBio:
-      "Senior Frontend Engineer at Interswitch with 8+ years of React experience. Expert in scalable application architecture and user-centric UI development. Passionate about mentoring and open source contributions.",
+      "Senior Frontend Engineer with 8+ years of React experience. Expert in scalable application architecture and user-centric UI development. Passionate about mentoring and open source contributions.",
     rating: 4.9,
     studentsEnrolled: 12847,
     image:
@@ -126,9 +126,9 @@ export const courses: Course[] = [
     duration: "10 weeks",
     price: 200,
     originalPrice: 300,
-    instructor: "Dr. Michael Rodriguez",
+    instructor: "Okechukwu Kingsley",
     instructorBio:
-      "Data Science Lead at Flutterwave with a PhD in Statistics. Has published over 50 research papers on machine learning and data analysis techniques. Experienced mentor and industry consultant.",
+      "Data Science Lead. Has published over 20 research papers on machine learning and data analysis techniques. Experienced mentor and industry consultant.",
     rating: 4.8,
     studentsEnrolled: 8934,
     image:
@@ -238,9 +238,9 @@ export const courses: Course[] = [
     duration: "12 weeks",
     price: 300,
     originalPrice: 400,
-    instructor: "Alex Thompson",
+    instructor: "Aboderin Daniel",
     instructorBio:
-      "Full-Stack Architect at Paystack with over a decade of experience. Expert in scalable system design, cloud infrastructure, and open-source contributions. Passionate about teaching and mentoring developers.",
+      "Full-Stack Architect  with over 5 years of experience. Expert in scalable system design, cloud infrastructure, and open-source contributions. Passionate about teaching and mentoring developers.",
     rating: 4.9,
     studentsEnrolled: 6721,
     image:
@@ -363,9 +363,9 @@ export const courses: Course[] = [
     duration: "8 weeks",
     price: 250,
     originalPrice: 350,
-    instructor: "Amira Johnson",
+    instructor: "Adedeji Michael",
     instructorBio:
-      "Cybersecurity Consultant with 10+ years of experience at Deloitte and IBM. Certified Ethical Hacker (CEH) and CISSP holder with a passion for securing digital infrastructures and mentoring new professionals.",
+      "Cybersecurity Consultant with 10+ years of experience. Certified Ethical Hacker (CEH) and CISSP holder with a passion for securing digital infrastructures and mentoring new professionals.",
     rating: 4.8,
     studentsEnrolled: 7265,
     image:
@@ -452,9 +452,9 @@ export const courses: Course[] = [
     duration: "6 weeks",
     price: 200,
     originalPrice: 300,
-    instructor: "Emily Davis",
+    instructor: "Okechukwu Kingsley",
     instructorBio:
-      "Senior Product Manager at Jumia with a decade of experience building customer-first digital experiences. Former UX researcher turned product strategist focused on outcome-driven development.",
+      "Senior Product Manager  with a decade of experience building customer-first digital experiences. Former UX researcher turned product strategist focused on outcome-driven development.",
     rating: 4.7,
     studentsEnrolled: 4021,
     image:

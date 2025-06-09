@@ -50,8 +50,8 @@ export const Navbar: React.FC = () => {
               <Image
                 src="/logo.png"
                 alt="Logo"
-                width={150}
-                height={150}
+                width={170}
+                height={170}
                 className="object-contain"
               />
 
