@@ -58,7 +58,7 @@ export const Footer: React.FC = () => {
               </div>
               <div>
                 <h3 className="text-xl font-bold bg-gradient-to-r from-blue-400 to-teal-400 bg-clip-text text-transparent">
-                  Codewithmonk
+                  Codewithmonk Codewithmonk
                 </h3>
                 <p className="text-xs text-gray-400 dark:text-gray-600">
                   Learn • Build • Grow

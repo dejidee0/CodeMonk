@@ -13,7 +13,7 @@ export const courses: Course[] = [
     originalPrice: 400,
     instructor: "Sarah Chen",
     instructorBio:
-      "Senior Frontend Engineer at Google with 8+ years of React experience. Expert in scalable application architecture and user-centric UI development. Passionate about mentoring and open source contributions.",
+      "Senior Frontend Engineer at Interswitch with 8+ years of React experience. Expert in scalable application architecture and user-centric UI development. Passionate about mentoring and open source contributions.",
     rating: 4.9,
     studentsEnrolled: 12847,
     image:
@@ -128,7 +128,7 @@ export const courses: Course[] = [
     originalPrice: 300,
     instructor: "Dr. Michael Rodriguez",
     instructorBio:
-      "Data Science Lead at Netflix with a PhD in Statistics. Has published over 50 research papers on machine learning and data analysis techniques. Experienced mentor and industry consultant.",
+      "Data Science Lead at Flutterwave with a PhD in Statistics. Has published over 50 research papers on machine learning and data analysis techniques. Experienced mentor and industry consultant.",
     rating: 4.8,
     studentsEnrolled: 8934,
     image:
@@ -240,7 +240,7 @@ export const courses: Course[] = [
     originalPrice: 400,
     instructor: "Alex Thompson",
     instructorBio:
-      "Full-Stack Architect at Spotify with over a decade of experience. Expert in scalable system design, cloud infrastructure, and open-source contributions. Passionate about teaching and mentoring developers.",
+      "Full-Stack Architect at Paystack with over a decade of experience. Expert in scalable system design, cloud infrastructure, and open-source contributions. Passionate about teaching and mentoring developers.",
     rating: 4.9,
     studentsEnrolled: 6721,
     image:
@@ -454,7 +454,7 @@ export const courses: Course[] = [
     originalPrice: 300,
     instructor: "Emily Davis",
     instructorBio:
-      "Senior Product Manager at Airbnb with a decade of experience building customer-first digital experiences. Former UX researcher turned product strategist focused on outcome-driven development.",
+      "Senior Product Manager at Jumia with a decade of experience building customer-first digital experiences. Former UX researcher turned product strategist focused on outcome-driven development.",
     rating: 4.7,
     studentsEnrolled: 4021,
     image:

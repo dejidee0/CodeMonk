@@ -93,35 +93,36 @@ const testimonials = [
 
 const team = [
   {
-    name: "Jane Doe",
+    name: "Funmi Adebayo",
     role: "CEO & Founder",
-    photo: "https://images.pexels.com/photos/2379005/pexels-photo-2379005.jpeg",
+    photo: "https://images.pexels.com/photos/1239291/pexels-photo-1239291.jpeg",
     bio: "Visionary leader with 10+ years in software development and education.",
-    linkedin: "https://linkedin.com/in/janedoe",
+    linkedin: "https://linkedin.com/in/funmiadebayo",
   },
   {
-    name: "John Smith",
+    name: "Emeka Okonkwo",
     role: "Lead Developer",
-    photo: "https://images.pexels.com/photos/2379005/pexels-photo-2379005.jpeg",
+    photo: "https://images.pexels.com/photos/2182970/pexels-photo-2182970.jpeg",
     bio: "Expert in scalable web applications and mentoring junior developers.",
-    linkedin: "https://linkedin.com/in/johnsmith",
+    linkedin: "https://linkedin.com/in/emekaokonkwo",
   },
   {
-    name: "Emily Davis",
-    role: "Head of Training=",
-    photo: "https://images.pexels.com/photos/2379005/pexels-photo-2379005.jpeg",
+    name: "Amina Hassan",
+    role: "Head of Training",
+    photo: "https://images.pexels.com/photos/774909/pexels-photo-774909.jpeg",
     bio: "Passionate educator focused on empowering the next generation of tech professionals.",
-    linkedin: "https://linkedin.com/in/emilydavis",
+    linkedin: "https://linkedin.com/in/aminahassan",
   },
 ];
+
 const founder = {
   name: "Adedeji Mike",
   role: "Founder & Software Architect",
-  bio: "Mike is a seasoned Software Architect passionate about building scalable digital experiences and empowering developers through education. With a keen eye for clean design and smart architecture, he’s driven by innovation and results.",
-  photo: "/founder.jpg", // Replace with actual image path
+  bio: "Mike is a seasoned Software Architect passionate about building scalable digital experiences and empowering developers through education. With a keen eye for clean design and smart architecture, he's driven by innovation and results.",
+  photo: "/founder.jpg",
   whatsapp:
     "https://wa.me/2348062907833?text=Hi%20Mike%2C%20I%20just%20visited%20your%20site%20and%20would%20love%20to%20connect!",
-  instagram: "https://instagram.com/daniel_aboderin", // Replace with real username
+  instagram: "https://instagram.com/daniel_aboderin",
   linkedin: "https://www.linkedin.com/in/adedejimike",
 };
 
